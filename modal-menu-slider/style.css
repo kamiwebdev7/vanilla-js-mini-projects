@@ -43,10 +43,11 @@ nav .logo {
 }
 
 nav .logo img {
-  width: 80px;
-  height: 80px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid white;
 }
 
 nav ul {
