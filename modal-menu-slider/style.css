@@ -1,142 +1,186 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 :root {
-  --modal-duration: 0.4s;
-  --primary-color: #30336b;
-  --secondary-color: #be2edd;
+  --primary: #30336b;
+  --secondary: #be2edd;
+  --text: #333;
+  --bg: #f4f4f4;
+  --transition: 0.3s ease;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  background: #f4f4f4;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition);
 }
 
-/* NAVIGATION */
+/* NAV */
 
 body.show-nav {
   transform: translateX(220px);
 }
 
 nav {
-  background: var(--primary-color);
-  border-right: 2px solid rgba(255,255,255,0.1);
-  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   width: 220px;
   height: 100%;
-  z-index: 100;
+  background: var(--primary);
+  color: white;
+  padding-top: 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
   transform: translateX(-100%);
+  z-index: 100;
 }
 
 nav .logo {
-  padding: 30px 0;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-nav .logo img {
-  height: 75px;
-  width: 75px;
+nav img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
 }
-
 nav ul {
-  padding: 0;
   list-style: none;
+  padding: 0;
   margin: 0;
 }
 
 nav ul li {
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 20px;
+  padding: 5px 10px;
 }
 
 nav ul li a {
+  display: block;
+  padding: 14px 18px;
+  border-radius: 6px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.25s ease;
+  position: relative;
 }
 
+/* Hover effect */
+
 nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--secondary-color);
+  transform: translateX(6px);
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 0%;
+  width: 4px;
+  background: var(--secondary-color);
+  transform: translateY(-50%);
+  transition: height 0.25s ease;
+  border-radius: 3px;
+}
+
+nav ul li a:hover::before {
+  height: 60%;
+}
+
+nav ul li a.active {
+  background: rgba(255, 255, 255, 0.08);
   color: var(--secondary-color);
 }
 
-/* HEADER */
+/* HERO */
 
 header {
-  background: var(--primary-color);
+  background: var(--primary);
   color: white;
-  padding: 50px 20px;
   text-align: center;
+  padding: 70px 20px;
   position: relative;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 32px;
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
 header p {
-  margin: 20px 0;
-  font-size: 18px;
-}
-
-.toggle {
-  background: rgba(0,0,0,0.3);
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  border-radius: 5px;
-}
-
-.cta-btn {
-  padding: 12px 30px;
-  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 25px;
+  opacity: 0.9;
 }
 
 /* BUTTONS */
 
-button,
-input[type="submit"] {
-  background: var(--secondary-color);
+button {
   border: none;
-  border-radius: 5px;
-  color: #fff;
   cursor: pointer;
-  padding: 10px 14px;
-  transition: opacity 0.2s ease;
+  border-radius: 6px;
+  transition: all var(--transition);
 }
 
-button:hover,
-input[type="submit"]:hover {
-  opacity: 0.9;
+.toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 6px 13px;
+  font-size: 23px;
+  color: white;
 }
 
-/* CONTAINER */
+.cta-btn {
+  background: var(--secondary);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTENT */
 
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+}
+
+.container p {
+  margin-bottom: 20px;
 }
 
 /* MODAL */
 
 .modal-container {
-  background: rgba(0,0,0,0.6);
-  display: none;
   position: fixed;
   inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
 }
 
 .modal-container.show-modal {
@@ -144,26 +188,22 @@ input[type="submit"]:hover {
 }
 
 .modal {
-  background: #fff;
-  border-radius: 8px;
-  width: 400px;
+  background: white;
+  width: 420px;
   max-width: 90%;
+  border-radius: 8px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: modalopen var(--modal-duration);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  animation: modalopen 0.4s;
 }
 
 .modal-header {
-  background: var(--primary-color);
-  padding: 15px;
+  background: var(--primary);
   color: white;
-}
-
-.modal-header h3 {
-  margin: 0;
+  padding: 15px 20px;
 }
 
 .modal-content {
@@ -177,6 +217,7 @@ input[type="submit"]:hover {
 .modal-form label {
   display: block;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .modal-form input {
@@ -186,16 +227,24 @@ input[type="submit"]:hover {
   border: 1px solid #ddd;
 }
 
+.submit-btn {
+  background: var(--secondary);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .close-btn {
-  background: transparent;
-  font-size: 24px;
   position: absolute;
-  right: 10px;
-  top: 5px;
+  top: 8px;
+  right: 12px;
+  background: none;
+  font-size: 22px;
   color: white;
 }
 
-/* MODAL ANIMATION */
+/* ANIMATION */
 
 @keyframes modalopen {
   from {
@@ -208,60 +257,32 @@ input[type="submit"]:hover {
   }
 }
 
-/* ---------------- */
-/* MOBILE RESPONSIVE */
-/* ---------------- */
+/* MOBILE */
 
 @media (max-width: 768px) {
-
   header h1 {
-    font-size: 26px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-
-  .cta-btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  nav {
-    width: 200px;
+    font-size: 28px;
   }
 
   body.show-nav {
     transform: translateX(200px);
   }
 
+  nav {
+    width: 200px;
+  }
 }
 
 @media (max-width: 480px) {
-
   header {
-    padding: 40px 15px;
+    padding: 50px 15px;
   }
 
   header h1 {
-    font-size: 22px;
-  }
-
-  header p {
-    font-size: 14px;
-  }
-
-  .toggle {
-    top: 15px;
-    left: 15px;
+    font-size: 24px;
   }
 
   .container {
-    padding: 15px;
+    padding: 30px 15px;
   }
-
-  .modal {
-    width: 88%;
-  }
-
 }

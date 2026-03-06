@@ -38,3 +38,19 @@ close.addEventListener('click', () => modal.classList.remove('show-modal'));
 window.addEventListener('click', e =>
   e.target == modal ? modal.classList.remove('show-modal') : false
 );
+
+const navLinks = document.querySelectorAll("nav ul li a");
+
+console.log(navLinks)
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function () {
+
+    // remove active class from all links
+    navLinks.forEach(item => item.classList.remove("active"));
+
+    // add active class to clicked link
+    this.classList.add("active");
+
+  });
+});

@@ -1,141 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>My Landing Page</title>
-  </head>
-  <body>
-    <nav id="navbar">
-      <div class="logo">
-        <img src="./images/profile1.png" alt="Kamran Shah Picture" />
-      </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact Me</a></li>
-      </ul>
-    </nav>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <header>
-      <button id="toggle" class="toggle">
-        <i class="fa fa-bars fa-2x"></i>
-      </button>
+<title>Modern Landing Page UI | Kamran Shah</title>
 
-      <h1>My Landing Page</h1>
+<link rel="stylesheet" href="style.css">
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, amet!
-      </p>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+</head>
 
-      <button class="cta-btn" id="open">Sign Up</button>
-    </header>
+<body>
 
-    <div class="container">
-      <h2>What is this landing page about?</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure
-        accusamus ab consectetur eos provident ipsa est perferendis architecto.
-        Provident, quaerat asperiores. Quo esse minus repellat sapiente, impedit
-        obcaecati necessitatibus.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio
-        officia ipsa. Cum dignissimos possimus et non provident facilis saepe!
-      </p>
+<!-- Navigation -->
+<nav id="navbar">
 
-      <h2>Tell Me More</h2>
+<div class="logo">
+<img src="./images/profile1.png" alt="Kamran Shah profile picture">
+</div>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eaque
-        delectus explicabo qui reprehenderit? Aspernatur ad similique minima
-        accusamus maiores accusantium libero autem iusto reiciendis ullam
-        impedit esse quibusdam, deleniti laudantium rerum beatae, deserunt nemo
-        neque, obcaecati exercitationem sit. Earum.
-      </p>
+<ul>
+<li><a href="#" class="active">Home</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 
-      <h2>Benefits</h2>
-      <ul>
-        <li>Lifetime Access</li>
-        <li>30 Day Money Back</li>
-        <li>Tailored Customer Support</li>
-      </ul>
+</nav>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quam
-        nostrum, fugiat, itaque natus officia laborum dolorum id accusantium
-        culpa architecto tenetur fuga? Consequatur provident rerum eius ratione
-        dolor officiis doloremque minima optio dignissimos doloribus odio
-        debitis vero cumque itaque excepturi a neque, expedita nulla earum
-        accusamus repellat adipisci veritatis quam. Ipsum fugiat iusto pariatur
-        consectetur quas libero dolor dolores dolorem, nostrum ducimus
-        doloremque placeat accusamus iste, culpa quaerat consequatur?
-      </p>
-    </div>
+<!-- Hero Section -->
+<header>
 
-    <!-- Modal -->
-    <div class="modal-container" id="modal">
-      <div class="modal">
-        <button class="close-btn" id="close">
-          <i class="fa fa-times"></i>
-        </button>
-        <div class="modal-header">
-          <h3>Sign Up</h3>
-        </div>
-        <div class="modal-content">
-          <p>Register with us to get offers, support and more</p>
-          <form class="modal-form">
-            <div>
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter Name"
-                class="form-input"
-              />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter Email"
-                class="form-input"
-              />
-            </div>
-            <div>
-              <label for="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter Password"
-                class="form-input"
-              />
-            </div>
-            <div>
-              <label for="password2">Confirm Password</label>
-              <input
-                type="password"
-                id="password2"
-                placeholder="Confirm Password"
-                class="form-input"
-              />
-            </div>
-            <input type="submit" value="Submit" class="submit-btn" />
-          </form>
-        </div>
-      </div>
-    </div>
+<button id="toggle" class="toggle" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button>
 
-    <script src="script.js"></script>
-  </body>
+<h1>Modern Landing Page UI</h1>
+
+<p>
+Clean and responsive landing page built using HTML, CSS and JavaScript with interactive UI components.
+</p>
+
+<button class="cta-btn" id="open">Create Account</button>
+
+</header>
+
+<!-- Main Content -->
+<main class="container">
+
+<section>
+<h2>About This Project</h2>
+
+<p>
+This landing page demonstrates core front-end development concepts including DOM manipulation, responsive layouts, modal interactions and dynamic navigation behavior.
+</p>
+
+<p>
+The project focuses on clean UI structure, reusable components and smooth user interaction to simulate a real product landing page experience.
+</p>
+</section>
+
+<section>
+
+<h2>Features</h2>
+
+<ul>
+<li>Responsive layout</li>
+<li>Sliding navigation menu</li>
+<li>Interactive signup modal</li>
+<li>Modern UI components</li>
+<li>Clean CSS structure</li>
+
+</ul>
+
+</section>
+
+</main>
+
+<!-- Modal -->
+
+<div class="modal-container" id="modal">
+
+<div class="modal">
+
+<button class="close-btn" id="close">
+<i class="fas fa-times"></i>
+</button>
+
+<div class="modal-header">
+<h3>Create Your Account</h3>
+</div>
+
+<div class="modal-content">
+
+<p>Register to access exclusive features and updates.</p>
+
+<form class="modal-form">
+
+<div>
+<label for="name">Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+</div>
+
+<div>
+<label for="email">Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+</div>
+
+<div>
+<label for="password">Password</label>
+<input type="password" id="password" placeholder="Enter password">
+</div>
+
+<div>
+<label for="password2">Confirm Password</label>
+<input type="password" id="password2" placeholder="Confirm password">
+</div>
+
+<input type="submit" value="Create Account" class="submit-btn">
+
+</form>
+
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
